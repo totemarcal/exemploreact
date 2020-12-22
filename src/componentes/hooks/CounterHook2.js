@@ -6,7 +6,7 @@ function CounterHook2() {
 
   useEffect(() => {
     document.title = `Você clicou ${count} vezes.`
-  });
+  }, []);
 
   return (
     <div>

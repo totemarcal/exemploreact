@@ -16,6 +16,8 @@ import ProfileUseContext from "./componentes/apicontext/ProfileUseContext";
 import ProfileComponentSetState from "./componentes/apicontext/ProfileComponentSetState";
 import ProfileComponentUseContext from "./componentes/apicontext/ProfileComponentUseContext";
 import ProfileContextHook from "./componentes/apicontext/ProfileContextHook";
+import StorageHook from "./componentes/hooks/StorageHook";
+import CacheStorageHook from "./componentes/hooks/CacheStorageHook";
 
 function App() {
   return (
@@ -39,7 +41,7 @@ function App() {
             <li><Link to={"/greetingComponent"} className="nav-link">
               Saudação (ComponentDidMount)
             </Link></li>
-            <li><Link to={"/greetingComponent2"} className="nav-link">
+            <li><Link to={"/cacheStorageHook"} className="nav-link">
               Saudação (LocalStorage)
             </Link></li>
           </ul>
@@ -60,6 +62,12 @@ function App() {
             </Link></li>
             <li><Link to={"/greetingHook2"} className="nav-link">
               Saudação (LocalStorage)
+            </Link></li>
+            <li><Link to={"/storageHook"} className="nav-link">
+              Storage (Custom Hook)
+            </Link></li>
+            <li><Link to={"/cacheStorageHook"} className="nav-link">
+              Cache Storage (LocalStorage)
             </Link></li>
           </ul>
         </li>
@@ -107,6 +115,9 @@ function App() {
           <Route exact path="/profileComponentUseContext" component={ProfileComponentUseContext} />
           <Route exact path="/profileComponentSetState" component={ProfileComponentSetState} />
           <Route exact path="/profileContextHook" component={ProfileContextHook} />
+          <Route exact path="/storageHook" component={StorageHook} />
+          <Route exact path="/cacheStorageHook" component={CacheStorageHook} />
+          
         </Switch>
       </div>
     </div>
