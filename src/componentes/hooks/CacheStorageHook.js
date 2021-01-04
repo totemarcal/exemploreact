@@ -4,7 +4,6 @@ const CacheStorageHook = () => {
     const [query, setQuery] = useState('')
     const [hits, setHits] = useState([])
  
- 
     const onChange = (e) => { setQuery(e.target.value )}
     const onSearch = (e) => {     
         e.preventDefault();
@@ -33,7 +32,6 @@ const CacheStorageHook = () => {
         console.log(result.hits)
     };
  
-  
     return (
       <div>
         <h1>Pesquise notícias de hackers com Local Storage</h1>

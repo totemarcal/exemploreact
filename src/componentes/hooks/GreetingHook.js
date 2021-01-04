@@ -21,7 +21,6 @@ export default function Greeting() {
       </p>
       <p>
         Msg: <span>{msg}</span> <br/>
-        
       </p>
     </div>
   );

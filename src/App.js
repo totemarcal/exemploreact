@@ -18,6 +18,8 @@ import ProfileComponentUseContext from "./componentes/apicontext/ProfileComponen
 import ProfileContextHook from "./componentes/apicontext/ProfileContextHook";
 import StorageHook from "./componentes/hooks/StorageHook";
 import CacheStorageHook from "./componentes/hooks/CacheStorageHook";
+import BasicRouter from "./componentes/router/BasicRouter"
+import UrlParameter from "./componentes/router/UrlParameter"
 
 function App() {
   return (
@@ -96,6 +98,19 @@ function App() {
             </Link></li>
           </ul>
         </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Router
+          </a>
+          <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+            <li><Link to={"/basicrouter"} className="nav-link">
+              Basic Router
+            </Link></li>
+            <li><Link to={"/urlparameter"} className="nav-link">
+              Url Parameter
+            </Link></li>
+          </ul>
+        </li>
         </div>
       </nav>
 
@@ -117,7 +132,8 @@ function App() {
           <Route exact path="/profileContextHook" component={ProfileContextHook} />
           <Route exact path="/storageHook" component={StorageHook} />
           <Route exact path="/cacheStorageHook" component={CacheStorageHook} />
-          
+          <Route exact path="/basicrouter" component={BasicRouter} />
+          <Route exact path="/urlparameter" component={UrlParameter} />
         </Switch>
       </div>
     </div>

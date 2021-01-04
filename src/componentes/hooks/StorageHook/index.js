@@ -3,13 +3,9 @@ import useStateWithLocalStorage from './useStateWithLocalStorage'
 import useStateWithSessionStorage from './useStateWithSessionStorage'
 
 const StorageHook = () => {
-  const [value, setValue] = useStateWithLocalStorage(
-    'myValueInLocalStorage'
-  );
+  const [value, setValue] = useStateWithLocalStorage('myValueInLocalStorage');
  
-  const [value2, setValue2] = useStateWithSessionStorage(
-    'myValueInSessionStorage'
-  );
+  const [value2, setValue2] = useStateWithSessionStorage('myValueInSessionStorage');
 
   const onChange = event => setValue(event.target.value);
   const onChange2 = event => setValue2(event.target.value);

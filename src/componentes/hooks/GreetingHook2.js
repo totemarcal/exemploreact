@@ -11,8 +11,8 @@ export default function GreetingHook2() {
   const handleFirstNameChange = (e) => setFirstName(e.target.value);
   const handleLastNameChange = (e) => setLastName(e.target.value);
   const resetState = (e) => {
-    setFirstName('')
-    setLastName('')
+    localStorage.removeItem('hooksFirstName');
+    localStorage.removeItem('hooksLastName');
   }
 
   useEffect(() => {
@@ -21,11 +21,14 @@ export default function GreetingHook2() {
   });
 
   return (
-    <div>
+    <div> 
       <input value={firstName} onChange={handleFirstNameChange} /><br />
       <input value={lastName} onChange={handleLastNameChange} />
       <p>
         Oi, <span>{firstName} {lastName}</span>
+      </p>
+      <p>
+        Local Storage: <span>{localStorage.getItem('hooksFirstName')} {localStorage.getItem('hooksLastName')}</span>
       </p>
       <button onClick={resetState}>Limpar</button>
     </div>
