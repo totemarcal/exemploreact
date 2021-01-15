@@ -81,10 +81,10 @@ function App() {
             <li><Link to={"/profileComponent"} className="nav-link">
               Perfil (Component)
             </Link></li>
-            <li><Link to={"/profileComponent"} className="nav-link">
+            <li><Link to={"/profileContextApi"} className="nav-link">
               Perfil (Context API)
             </Link></li>
-            <li><Link to={"/profileComponent"} className="nav-link">
+            <li><Link to={"/profileUseContext"} className="nav-link">
               Perfil (useContext)
             </Link></li>
             <li><Link to={"/profileComponentSetState"} className="nav-link">
@@ -127,8 +127,8 @@ function App() {
           <Route exact path="/profileComponent" component={ProfileComponent} />
           <Route exact path="/profileContextApi" component={ProfileContextApi} />
           <Route exact path="/profileUseContext" component={ProfileUseContext} />
-          <Route exact path="/profileComponentUseContext" component={ProfileComponentUseContext} />
           <Route exact path="/profileComponentSetState" component={ProfileComponentSetState} />
+          <Route exact path="/profileComponentUseContext" component={ProfileComponentUseContext} />
           <Route exact path="/profileContextHook" component={ProfileContextHook} />
           <Route exact path="/storageHook" component={StorageHook} />
           <Route exact path="/cacheStorageHook" component={CacheStorageHook} />
