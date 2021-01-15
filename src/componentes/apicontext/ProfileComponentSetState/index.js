@@ -1,7 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
 import './style.css';
-
 const ProfileContext = React.createContext();
 class ProfileProvider extends React.Component {
   state = {

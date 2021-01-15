@@ -4,7 +4,7 @@ import { ProfileContext } from "./ProfileContext";
 
 
 const Profile = () => {
-    const [userInfo, setUserInfo] = useContext(ProfileContext);
+    const [userInfo] = useContext(ProfileContext);
     return (
       <div className="profile">
         <img src={userInfo.companyImage} />

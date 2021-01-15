@@ -6,7 +6,7 @@ const ChangeTeam = () => {
     return (
       <>
         <button className="profile-button"
-          onClick={() => userInfo.toggleTeam('team', 'Kendo for Angular')}>Angular</button>
+          onClick={() => setUserInfo({...userInfo,['team']: 'Kendo for Angular'})}>Angular</button>
         <button className="profile-button"
           onClick={() => userInfo.toggleTeam('team', 'KendoVue')}>Vue</button>
         <button className="profile-button"

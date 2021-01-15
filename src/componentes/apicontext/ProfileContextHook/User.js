@@ -4,7 +4,7 @@ import Team from './Team'
 import ChangeTeam from './ChangeTeam'
 
 const User = () => {
-    const [userInfo, setUserInfo] = useContext(ProfileContext);
+    const [userInfo] = useContext(ProfileContext);
     return (
       <div className="user">
         <a href={userInfo.url}>
